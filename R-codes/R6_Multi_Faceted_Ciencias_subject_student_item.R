@@ -31,7 +31,7 @@ options(mc.cores = parallel::detectCores())
 #
 
 # Read the data
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 subject_data = read.csv("D5_subject_data_sample.txt",header=TRUE,sep=";")
 head(subject_data)
 
@@ -52,14 +52,14 @@ dat = list(student = subject_data[,1], subject=subject_data[,2], y=subject_data[
 ################
 #first compile and save the fitted model for re-using
 # data are taken from the current R works
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Stan-codes")
+setwd("/Stan-codes")
 prof_fit_p_4 <- stan(file = 'S6_Multi_Faceted_Ciencias_subject_student_item.stan', data = dat,iter = 4, chains = 1)
 
 # now sample using the compiled model
 prof_fit_4<- stan(fit = prof_fit_p_4,  data =dat, iter = 2000, chains = 4)
 
 # save the stan object
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 save(prof_fit_4,file="Model_student_subject_item.Rdata")
 # to load the object
 #load(file="Model_student_subject_item.Rdata")
