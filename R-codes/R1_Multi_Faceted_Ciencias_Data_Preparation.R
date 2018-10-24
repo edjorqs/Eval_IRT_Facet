@@ -132,7 +132,7 @@ for (i in iidx){
 # save recode reponse data (optional)
 ################################################
 #data[,20:43] = Y
-#setwd("D:/Alvaro/Alvaro_2018/Papers/Eval_IRT_Facet/Suplementary Material/Data")
+#setwd("/Data")
 #write.csv2(data,file="D3_Sample_Data_recode.txt", row.names = FALSE)
 
 # subsets of data
@@ -230,7 +230,7 @@ for(i in 1:L4){
 key_Student=Id_Stu_or
 complete_data = cbind(key_Student,Student, Professor, Subject,SelfPerf,Y, datos[,c(44:45,2:7, 10:12, 14:19)])
 # save the data
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 write.csv2(complete_data,file="D3_Complete_Recode_Data_Sample.txt", row.names = FALSE)
 
 #
@@ -259,7 +259,7 @@ Y_prof    = Y_prof[no.missing]#20606
 professor_data = cbind(Student,Professor,Y_prof,SelfPerf_pr,Item) #20606   x  5, 15 items
 #
 # save the data
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 write.csv2(professor_data,file="D4_professor_data_sample.txt", row.names = FALSE)
 #
 
@@ -292,7 +292,7 @@ Y_sub    = Y_sub[no.missing]
 subject_data = cbind(Student,Subject, Y_sub,SelfPerf_su,Item) #5503 rows by 5 cols, 4 items
 
 # save the data
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 write.csv2(subject_data,file="D5_subject_data_sample.txt", row.names = FALSE)
 #
 
