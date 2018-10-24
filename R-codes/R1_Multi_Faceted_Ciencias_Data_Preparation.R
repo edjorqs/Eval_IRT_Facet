@@ -53,7 +53,7 @@
 ##################################################################
 #
 # Read the original sample data
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 # Use this sample for experiments
 # 1380  registers, corresponding to 123 subjects, with 4 to 20 registers, 
 # 36 carrers with 3 to 223 registers, 124 professors wit 3 to 36 registers.  
