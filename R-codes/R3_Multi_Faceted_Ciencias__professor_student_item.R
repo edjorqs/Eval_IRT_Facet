@@ -30,7 +30,7 @@ options(mc.cores = parallel::detectCores())
 #
 
 # Read the data
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 professor_data = read.csv("D5_subject_data_sample.txt",header=TRUE,sep=";")
 head(professor_data)
 
