@@ -51,13 +51,13 @@ dat = list(student = professor_data[,1], professor=professor_data[,2], y=profess
 ################
 #first compile and save the fitted model for re-using
 # data are taken from the current R works
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Stan-codes")
+setwd("/Stan-codes")
 prof_fit_p_ <- stan(file = 'S3_Multi_Faceted_Ciencias_professor_student_item.stan', data = dat,iter = 4, chains = 1)
 
 # now sample using the compiled model
 prof_fit_2<- stan(fit = prof_fit_p_,  data =dat, iter = 2000, chains = 4, control = list(max_treedepth = 12))
 # save the stan object
-setwd("/home/lalo/Documents/MGE/tesis/Paper_Eval_Docente/Suplementary Material/Data")
+setwd("/Data")
 save(prof_fit_2,file="Model_student_professor_item.Rdata")
 # to load the object
 #load(file="Model_2_prof_fit_2_pr_it_st.Rdata")
