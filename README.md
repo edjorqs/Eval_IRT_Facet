@@ -16,3 +16,6 @@ This repository contains:
   R4_Multi_Faceted_Ciencias__professor_student_performance_item.R 15 items with 3 categories analysis.
   R6_Multi_Faceted_Ciencias_subject_student_item.R 4 items with 4 categories analysis.
   R7_Multi_Faceted_Ciencias_subject_student_item.R Se guardan los resultados de la simulación.
+
+## Stan-codes
+  Contains models to be implemented in R-codes.
